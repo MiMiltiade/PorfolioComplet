@@ -16,7 +16,7 @@ const regexGithub = /^github$/i;
 const regexLinkedin = /^Linkedin$/i;
 const regexOutils = /^outils$/i;
 let timeOut;
-
+let newForm;
 
 
 // preventDefault du formulaire
@@ -24,6 +24,7 @@ let timeOut;
 formulaire.addEventListener('submit', (e) =>{
     e.preventDefault();
 });
+
 
 
 // Function qui se lance au démarage 
@@ -80,26 +81,25 @@ window.onload = function letsgo(){
 
         setTimeout(function() {
         
-            CreateTypeJs(h1, 2900, [`Pour naviguer sur le portfolio tapez 'AIDE' puis appuyez sur entré`]);}, 11900)
+          CreateTypeJs(h1, 2900, [`Pour naviguer sur le portfolio tapez 'AIDE' puis appuyez sur entré`]);}, 11900)
        
-        setTimeout(function(){
-            label.style.display = "inline-block";
-            inputStart.style.display = "inline-block";
-        }, 14800); 
-    
-    }
-    startNaviguation();
-    
-}
+         setTimeout(function(){
+             label.style.display = "inline-block";
+             inputStart.style.display = "inline-block";
+         }, 14800); 
+  
+     }
+     startNaviguation();
+  
+ }
 
 
-// On se met à l'écoute d'un keydown pour gérer la création de contenu
 
-window.addEventListener('keydown', (e) => {
-    
-    // fonction global 
+formulaire.onsubmit = submit;
 
-    if(e.code === "NumpadEnter" || e.code === "Enter"){
+function submit(event) { {
+    event.preventDefault();
+
 
         const input = document.querySelector('input.classInput');
 
@@ -114,6 +114,7 @@ window.addEventListener('keydown', (e) => {
             const newParag = document.createElement('p');
             newParag.setAttribute('class', 'p-text');
             
+       
             formulaire.appendChild(newDiv)
             newDiv.appendChild(newParag)
 
@@ -317,15 +318,17 @@ window.addEventListener('keydown', (e) => {
 
         }
 
-    };
-});
-
-
+     };
+};
 
 
 // function pour créer de nouvel input 
 
 function créeNouveauInput(tempsDeDelay){
+
+    newForm = document.createElement('form');
+    newForm.setAttribute('class', 'global-form');
+  
 
     const newDiv = document.createElement('div');
     newDiv.setAttribute('class', 'div-label-input');
@@ -341,20 +344,24 @@ function créeNouveauInput(tempsDeDelay){
     newInput.setAttribute("id", "idInput2");
     newInput.setAttribute("autofocus", "focus");
     
-    formulaire.appendChild(newDiv);
+    formulaire.appendChild(newForm)
+    newForm.appendChild(newDiv);
     newDiv.appendChild(newLabel);
     newDiv.appendChild(newInput);
     newInput.focus();
     
+    newForm.onsubmit = submit;
+
+
     gsap.from(newLabel, {
         visibility: 'hidden',
-        duration: 0.4,
+        duration: 0.2,
         ease: "power4.in",
         delay: tempsDeDelay
         })
     gsap.from(newInput, {
         visibility: 'hidden',
-        duration: 0.4,
+        duration: 0.2,
         ease: "power4.in",
         delay: tempsDeDelay
 
