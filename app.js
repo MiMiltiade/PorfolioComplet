@@ -122,7 +122,7 @@ window.addEventListener('keydown', (e) => {
             function launchType(){
                 setTimeout(function() {
                
-                CreateTypeJs(newParag, 12650, [`Pour naviguer au sein de mon porte folio merci d'entrer une des commandes suivantes : <br><br>
+                CreateTypeJs(newParag, 12650, [`Pour naviguer au sein de mon portfolio merci d'entrer une des commandes suivantes : <br><br>
                 À PROPOS => Permet de voir une brève présentation de moi-même <br> 
                 PROJETS => Permet d'accéder à la listes des projets que j'ai fait <br>
                 OUTILS => Voir la liste des outils et languages de programmation que j'utilise et apprend <br>
