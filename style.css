@@ -293,7 +293,7 @@ animation: progress3 2.5s ease-in forwards;
 }
 .div-para-load-container{
     text-align: center;
-    width: 500px;
+    width: 75%;
     height: 350px;
     position: absolute;
     top: 37%;
@@ -306,7 +306,7 @@ animation: progress3 2.5s ease-in forwards;
 
 .para-load{
     display: inline;
-    margin-top: 250px;
+    margin-top: 25%;
     color: #16ee1d;
     font-size: 38px;
 }
