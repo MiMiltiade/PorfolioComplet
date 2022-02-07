@@ -95,6 +95,7 @@ a{
 .p-text{
     display: inline;
     font-size: 22px;
+    line-height: 28px;
     text-align: justify;
     color: #16ee1d;
 
@@ -104,6 +105,7 @@ a{
     width: 80%;
     text-align: justify;
 }
+
 .code-source{
     font-size: 18px;
 }
@@ -191,14 +193,22 @@ a{
 
 /* Les progresses bar de la partie outils */
 
+.container-global-progress-bar{
+    margin: 10px 0 10px 8.5%;
+    width: 80%;
+    text-align: justify;
+    display: none;
+}
+
 .container-flex{
-    display: flex;
+    display: none;
     align-items: center;
+    
 }
 
 
 .progress-bar-container{
-    width: 350px;
+    width: 30%;
     height: 16px;
     border: 2px solid #16ee1d;
     border-radius: 5px;
@@ -217,12 +227,12 @@ a{
     text-align: center;
     line-height: 16px;
     font-size: 8px;
-    width: 0%;
+    /* width: 70%; */
     height: 96%;
     background: #16ee1d;
     position: relative;
 }
-.progresse-bar{
+/* .progresse-bar{
 animation: progress 2.5s ease-in forwards;
 }
 .progresse-bar1{
@@ -233,7 +243,7 @@ animation: progress2 2.5s ease-in forwards;
 }
 .progresse-bar3{
 animation: progress3 2.5s ease-in forwards;
-}
+} */
 
 .pourcentage-progress-bar{
     z-index: 9999;
@@ -309,4 +319,8 @@ animation: progress3 2.5s ease-in forwards;
     margin-top: 25%;
     color: #16ee1d;
     font-size: 38px;
+}
+
+.fleche{
+    font-size: 28px;
 }
