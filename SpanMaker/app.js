@@ -47,7 +47,7 @@ btnAide.addEventListener('click', () => {
     clearTimeout(disparaitre);
 
     function disparaitre(){
-       timeOutID = window.setTimeout(aideDisparaitre, 10000) 
+       timeOutID = window.setTimeout(aideDisparaitre, 20000) 
     }
     function aideDisparaitre(){
         bulleAide.classList.remove('active')
