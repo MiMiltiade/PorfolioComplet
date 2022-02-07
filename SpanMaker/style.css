@@ -172,6 +172,21 @@ form{
 }
 
 
+@media screen and (max-width: 1300px){
+
+        .label-value-attribute-span{
+            font-size: 18px;
+
+        }
+        .input-value-attribute-span{
+            font-size: 18px;
+        }
+        .div-span{
+            display: flex;
+            flex-direction: column;
+        }
+}
+
 /* La partie où s'affiche les résultats */
 
 
